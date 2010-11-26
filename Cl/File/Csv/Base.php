@@ -81,7 +81,7 @@ class Cl_File_Csv_Base
 	{
 		array_unshift($this->_data, $this->_header);
 		header('Content-type: application/csv');
-		header('Content-Disposition: attachment; filename=' . $fileName . '.csv');
+		header('Content-Disposition: attachment; filename="' . $fileName . '.csv"');
 		header('Pragma: no-cache');
 		header('Expires: 0');
 		echo implode("\n", $this->_data);
